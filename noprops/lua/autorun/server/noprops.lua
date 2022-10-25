@@ -11,4 +11,4 @@ hook.Add("PlayerSpawnProp", "RestrictSpawningProps", function(ply)
     else
         return false
     end
-end)```
+end)
