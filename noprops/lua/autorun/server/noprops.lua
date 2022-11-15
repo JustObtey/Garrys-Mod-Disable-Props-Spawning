@@ -1,11 +1,10 @@
--- Put the jobs who can spawn props there
+-- Put the jobs who can spawn props there, you can replace "Name Job" with the actual name of your job
 NoProps_Jobs  = {
-    ["Staff"] = true,
-    ["Name Job"] = false
+    ["Citizen"] = true,
+    ["Name Job"] = false -- WARNING LAST LINE SHOULD NOT HAVE A COMA
 }
 
 hook.Add("PlayerSpawnProp", "RestrictSpawningProps", function(ply)
--- You can change "Staff" by any other job name, make sure it's the name and not the TEAM name
     if NoProps_Jobs[team.GetName(ply:Team())] then
         return true
     else
